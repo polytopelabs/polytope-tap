@@ -1,35 +1,35 @@
 class PolytopeCli < Formula
   desc "The Polytope CLI"
   homepage "https://polytope.com"
-  version "0.1.23"
+  version "0.1.25"
 
   @@os = "#{OS.mac? ? 'macos' : 'linux'}"
   @@arch = "#{Hardware::CPU.intel? ? 'amd64' : 'arm64'}"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://polytope-cli-releases.s3.eu-north-1.amazonaws.com/pt-0.1.23-macos-amd64.bz2"
-      sha256 "ec974ff87b8805f4b25fbbc7d252311971f5fbb29d96d8d807c70ed3032635fa"
+      url "https://polytope-cli-releases.s3.eu-north-1.amazonaws.com/pt-0.1.25-macos-amd64"
+      sha256 "889b0d0beec140431456e42f2b509c85c3f12937a8179d5c788c1e56ed4617f3"
     elsif Hardware::CPU.arm?
-      url "https://polytope-cli-releases.s3.eu-north-1.amazonaws.com/pt-0.1.23-macos-arm64.bz2"
-      sha256 "c154010249bf15c78698b473f1eae34fbc36f4ad876696e42960d49567e2a61b"
+      url "https://polytope-cli-releases.s3.eu-north-1.amazonaws.com/pt-0.1.25-macos-arm64"
+      sha256 "835fb40e54ae5c6050217f2d2735c0f6f8eb170a3281296397dfb136e8f971e5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://polytope-cli-releases.s3.eu-north-1.amazonaws.com/pt-0.1.23-linux-amd64.bz2"
-      sha256 "07c4380bf3880204c46e209d7abf0701e315e8d028d36e4eaf01975993e57ebf"
+      url "https://polytope-cli-releases.s3.eu-north-1.amazonaws.com/pt-0.1.25-linux-amd64"
+      sha256 "0b663f397a68bcb8b555aa55efaa81a9fc1022957170f8309627e336d3d17427"
     elsif Hardware::CPU.arm?
       odie "We don't provide ARM builds on Linux yet – please let us know if you want this!"
     end
   end
 
   def install
-    bin.install "pt-0.1.23-#{@@os}-#{@@arch}" => "pt"
+    bin.install "pt-0.1.25-#{@@os}-#{@@arch}" => "pt"
   end
 
   test do
-    assert_includes shell_output("#{bin}/pt --version 2>&1"), "0.1.23-67b5119be-#{@@os}-#{@@arch}"
+    assert_includes shell_output("#{bin}/pt --version 2>&1"), "0.1.25-175d8bdd6-#{@@os}-#{@@arch}"
   end
 end

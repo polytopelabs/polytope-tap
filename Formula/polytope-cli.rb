@@ -2,6 +2,7 @@ class PolytopeCli < Formula
   desc "The Polytope CLI"
   homepage "https://polytope.com"
   version "0.1.25"
+  bottle :unneeded
 
   @@os = "#{OS.mac? ? 'macos' : 'linux'}"
   @@arch = "#{Hardware::CPU.intel? ? 'amd64' : 'arm64'}"

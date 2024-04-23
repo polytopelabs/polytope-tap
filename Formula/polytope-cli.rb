@@ -9,17 +9,17 @@ class PolytopeCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://polytope.com/releases/polytope-cli-0.1.26-macos-amd64.gz"
-      sha256 "4b04e30c34f67e27c4d65892d4b3409758a1c55268b44763259dfab346651636"
+      sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     elsif Hardware::CPU.arm?
       url "https://polytope.com/releases/polytope-cli-0.1.26-macos-arm64.gz"
-      sha256 "d72e761fef7bd6daa78dcece4c928a1a42273c19854135eb4e21f19cddcf5e47"
+      sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://polytope.com/releases/polytope-cli-0.1.26-linux-amd64.gz"
-      sha256 "16ef83dce7e221b1feb3296acea7d3ce01aed5c0cf9aae89f368328130e4ba50"
+      sha256 "17a4554f48c4b39213c02df364048dbbd817a55f72b15034f9c266f9240d058b"
     elsif Hardware::CPU.arm?
       odie "We don't provide ARM builds on Linux yet – please let us know if you want this!"
     end

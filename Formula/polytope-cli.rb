@@ -9,10 +9,10 @@ class PolytopeCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://polytope.com/releases/polytope-cli-0.1.26-macos-amd64.gz"
-      sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      sha256 "2e506fef9c72936d28a23209a936195224c691f7d2efee1af3f4cbd8e38b5999"
     elsif Hardware::CPU.arm?
       url "https://polytope.com/releases/polytope-cli-0.1.26-macos-arm64.gz"
-      sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      sha256 "ae66b1219d2a0cf76cc2c21ba06d59fca2f9cb6cf637d37583c77104426ae3ce"
     end
   end
 

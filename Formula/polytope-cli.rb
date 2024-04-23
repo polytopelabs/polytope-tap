@@ -26,10 +26,10 @@ class PolytopeCli < Formula
   end
 
   def install
-    bin.install "polytope-cli-0.1.26-73f1b2a35-#{@@os}-#{@@arch}" => "pt"
+    bin.install "polytope-cli-0.1.26-#{@@os}-#{@@arch}" => "pt"
   end
 
   test do
-    assert_includes shell_output("#{bin}/pt --version 2>&1"), "0.1.26-#{@@os}-#{@@arch}"
+    assert_includes shell_output("#{bin}/pt --version 2>&1"), "0.1.26-73f1b2a35-#{@@os}-#{@@arch}"
   end
 end

@@ -26,7 +26,7 @@ class PolytopeCli < Formula
   end
 
   def install
-    bin.install "pt-0.1.26-#{@@os}-#{@@arch}" => "pt"
+    bin.install "pt-0.1.26-73f1b2a35-#{@@os}-#{@@arch}" => "pt"
   end
 
   test do

@@ -9,17 +9,17 @@ class PolytopeCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://polytope.com/releases/polytope-cli-0.1.27-macos-amd64.gz"
-      sha256 "1c8c5ac33673d5bd1c0a48ad295ba47694b332d469e69ff3fd7ddc5a717bf4dc"
+      sha256 "d7ca04604da3a07403b2cd5deaf02dcea439e219d6db16e4252c3117e458209b"
     elsif Hardware::CPU.arm?
       url "https://polytope.com/releases/polytope-cli-0.1.27-macos-arm64.gz"
-      sha256 "47c8e04f6a458bbc5dbeaeaa39e42b5300307c5692632648c5315832ddd04a7d"
+      sha256 "8573aa08210eb137bc54204e67c6f745c5b8c9879f9dce7f15f0a05803903adb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://polytope.com/releases/polytope-cli-0.1.27-linux-amd64.gz"
-      sha256 "a3521999929aba6d973479d2dd9c6c930c670a2ca5c111ad30ab6e49edc03ad5"
+      sha256 "3df71ea60b5ffd28bae516b6c6eb25c5ee682d4a1119fa53171b55d5bc94f5cf"
     elsif Hardware::CPU.arm?
       odie "We don't provide ARM builds on Linux yet – please let us know if you want this!"
     end
@@ -30,6 +30,6 @@ class PolytopeCli < Formula
   end
 
   test do
-    assert_includes shell_output("#{bin}/pt --version 2>&1"), "0.1.27-8a5a2fad8-#{@@os}-#{@@arch}"
+    assert_includes shell_output("#{bin}/pt --version 2>&1"), "0.1.27-74e69fc9b-#{@@os}-#{@@arch}"
   end
 end
